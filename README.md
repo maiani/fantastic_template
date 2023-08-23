@@ -10,7 +10,7 @@ The Fantastic PhD Thesis Template is a LaTeX template designed for creating mode
 
 - Modern and professional design.
 - Easy-to-follow structure for a typical PhD thesis.
-- Instructions included as comments in the .tex files.
+- Instructions are included as comments in the .tex files.
 - Individual chapter compilation supported.
 
 ## Usage Instructions
@@ -18,6 +18,9 @@ Clone or download the template from the repository.  Customize the template by e
 
 ## Installation
 No installation is required for this template. Simply download and start using it!
+
+## Suggestion
+Be consistent with colors by defining a palette before starting to work on figures. Use the same colors for the colored text adjusting the setting in the main TeX file. 
 
 ## License
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC). For details, see [LICENSE](LICENSE) file.
