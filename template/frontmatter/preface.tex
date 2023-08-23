@@ -1,0 +1,55 @@
+\documentclass[../main]{subfiles}
+
+
+\begin{document}
+\chapter{Preface}
+\lipsum[1-10]
+
+
+% ADD YOUR PUBLICATIONS HERE TO RESERVE THE P LABELS
+\newrefcontext[labelprefix=P]
+\nocite{Doe_PRB_2021}
+\nocite{Doe_npjFP_2022}
+\nocite{Doe_2023}
+
+% Outline of the thesis
+\clearpage
+\subsubsection{Outline}
+This Ph.D. thesis deals with several distinct topics. The thesis works as an introduction to the field by integrating a summary of the major findings of my research activity with some additional background material.
+
+\begin{itemize}
+    \item Chapter~\ref{ch:1} introduces the theory.
+    
+    \item Chapter~\ref{ch:2} discusses simulations of Ref.~\cite{Doe_PRB_2021, Doe_npjFP_2022}.
+    
+    \item Chapter~\ref{ch:3} is an adaptation of Ref.~\cite{Doe_2023}. 
+    
+\end{itemize}
+
+\subsection{Publications and the thesis author’s contributions}
+This thesis includes the results of the following articles, reformulated in a coherent and comprehensive manner. When they provide the most effective explanation of the concept, some passages have been quoted verbatim or minimally modified from the original sources.
+
+\begin{enumerate}
+    \item \textit{Something very interesting part I} \newline 
+         \textbf{John Doe}, Adam Mc Supervisor 
+         \newline
+        \href{https://doi.org/10.1103/DOI}{Physical Review Z, Vol. 1, No. 1 (March 2021) p. 104508}, Ref. \cite{Doe_PRB_2021}. \newline
+        I was the primary contributor to scientific investigation, image preparation, and paper writing.
+        \\
+    \item \textit{A new fantastic particle} \newline
+         \textbf{John Doe}, Coauthor Smith, Adam Mc Supervisor \newline 
+        \href{https://doi.org/10.1038/DOI}{npj Fantastic Physics, Vol. 8, No. 82 (August 2022)},  Ref.~\cite{Doe_npjFP_2022}.\newline
+        I contributed to the design of the project, interpretation of the results, and paper writing. 
+        \\
+        \item \textit{Fantastic unpublished paper} \newline
+        \textbf{John Doe} \newline        
+        \href{arxiv_link}{arXiv}, Ref.~\cite{Doe_2023}  \newline
+        I designed the project and provided support to the scientific investigation. I led the paper writing process. 
+        \\
+\end{enumerate}
+
+
+\ifSubfilesClassLoaded{%
+\printbibliography
+}{}
+\end{document}

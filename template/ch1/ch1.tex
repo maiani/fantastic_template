@@ -1,0 +1,20 @@
+\documentclass[../main]{subfiles}
+
+\begin{document}
+\chapter[SHORT TITLE FOR TOC]{Long title}
+\label{ch:ch1}
+\begin{chquote}
+A smart quote \\
+is just a stupid sentence \\
+typed in italics. \\
+\bigskip
+-- Someone smart
+\end{chquote}
+
+\clearpage
+\lipsum[1-10]
+
+\ifSubfilesClassLoaded{%
+\printbibliography
+}{}
+\end{document}

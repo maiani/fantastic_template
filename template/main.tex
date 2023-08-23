@@ -1,0 +1,185 @@
+\documentclass[twoside, 10pt]{memoir} % Use memoir class
+\usepackage{subfiles} % Allows modular compilation
+\usepackage{pdfpages} % Allows for including pdfs
+
+% Dummy text
+\usepackage{lipsum}
+
+% Font encoding
+\usepackage[T1]{fontenc}
+ \DeclareUnicodeCharacter{301}{ì}
+\usepackage{microtype}
+
+% Language and hyphenation
+\usepackage[main=english, danish]{babel}
+\usepackage{csquotes}
+
+% Define the colors you want
+\usepackage{xcolor}
+\definecolor{my_blue_d}{RGB}{92, 136, 188}
+\definecolor{my_green_d}{RGB}{85, 153, 87}
+\definecolor{my_red_d}{RGB}{162, 27, 50}
+
+% Fonts (pick one)
+%\usepackage{lmodern}   % Latin modern font (revised default font)
+\usepackage{fourier}    % A nice sans-serif font that has support for mathfonts
+
+% Math
+\usepackage{upgreek} % Upright greek font
+\usepackage{mathtools, amsfonts, amssymb, fixmath, bm} 
+% Packages for math mode, remove physics if unnecessary
+
+% \usepackage[bb=ams, cal=cm, scr=boondox, frak=euler]{mathalpha}
+\usepackage[bb=ams, cal=cm]{mathalpha} % mathbb and mathcal in fourier sucks, let's revert to ams version
+\let\amsmathbb\mathbb
+\AtBeginDocument{
+    \let\mathbb\relax
+    \newcommand{\mathbb}[1]{\amsmathbb{#1}}
+}                   
+
+% Extra math operators
+\DeclareMathOperator{\argmax}{argmax}
+
+% Figures and Tables
+\usepackage{booktabs}
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage[figurename=Fig.]{caption}
+
+% Other scientific packages
+ \usepackage{chemmacros}
+\chemsetup{greek=upgreek}
+\usepackage{siunitx}
+\usepackage{nicematrix}
+
+% Tickz
+\usepackage{tikz}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle={TITLE HERE}, % EDIT 
+    pdfauthor={AUTHOR HERE}, % EDIT
+    unicode,
+    naturalnames,
+    linktocpage=true,
+    colorlinks=true,
+    linkcolor=my_red_d,
+    citecolor=my_green_d,
+    urlcolor=my_blue_d,        
+}
+
+% Page geometry
+\stockaiii
+\pageaiv
+\setstocksize{250mm}{176mm}
+\settrims{0pt}{0pt}
+\settrimmedsize{\stockheight}{\stockwidth}{*}
+% \settypeblocksize{245mm}{155mm}{*}
+\setulmargins{2.5cm}{*}{*}
+% \setheadfoot{\onelineskip}{2\onelineskip}
+% \setheaderspaces{1.5cm}{*}{*}
+\setlrmarginsandblock{2cm}{1.5cm}{*}
+\checkandfixthelayout
+
+% Chapter title layout
+\pagestyle{ruled}
+\chapterstyle{ell}
+\setlength{\beforechapskip}{15pt}
+
+
+% Environments for epigraphs and disclaimers
+\usepackage{ragged2e}
+\newenvironment{chquote}
+    {
+    \begin{FlushRight}\itshape
+    }
+    { 
+    \end{FlushRight}
+    }
+\newenvironment{disclaimer}%
+    {
+    %\begin{Center}
+    \hrule
+    \medskip
+    \begin{small}
+    }%
+    { 
+    \end{small}
+    %\end{Center}
+    }
+
+% Bibliography
+\usepackage[
+   backend=biber,
+   style=numeric-comp,
+   useprefix=true,
+   sorting=none,
+   sortcites=true,
+   maxbibnames=99,
+   giveninits=true,
+   defernumbers=true
+]{biblatex}
+
+% Set special keys for references in the publication.bib file (own papers)
+\DeclareSourcemap{
+  \maps[datatype=bibtex,overwrite]{
+    \map{
+      \perdatasource{bibliography.bib}
+      \step[fieldset=keywords, fieldvalue={,file1}, append]
+    }
+    \map{
+      \perdatasource{publications.bib}
+      \step[fieldset=keywords, fieldvalue={,file2}, append]
+    }
+  }
+}
+\addbibresource{publications.bib}
+\addbibresource{bibliography.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{TILE}
+\author{AUTHOR}
+\date{DATE}
+
+\begin{document}
+\subfile{frontmatter/half_title.tex}
+\subfile{frontmatter/title_page.tex}
+\clearpage
+
+\frontmatter
+\subfile{frontmatter/abstract}
+\clearpage
+
+\subfile{frontmatter/acknowledgments}
+\clearpage
+
+\subfile{frontmatter/abbreviations}
+
+\clearpage
+\tableofcontents
+
+\subfile{frontmatter/preface}
+
+\mainmatter
+
+\subfile{ch1/ch1}
+\subfile{ch2/ch2}
+\subfile{ch3/ch3}
+
+\appendix
+\subfile{appendix/Appendix_A}
+\subfile{appendix/Appendix_B}
+\backmatter
+
+
+% Separate the bibliography from your papers into the two files
+\printbibheading[title={Bibliography}]
+\newrefcontext[labelprefix=P]
+\printbibliography[keyword=file2, heading=none]
+\newrefcontext[labelprefix=]
+\printbibliography[keyword=file1, heading=none]
+
+\subfile{backmatter/colphon}
+\end{document}
