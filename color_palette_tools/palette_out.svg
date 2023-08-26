@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="20" height="100" viewBox="0 0 20 100">
+<defs>
+</defs>
+<rect x="0" y="0" width="10" height="10" fill="rgb(242, 165, 0)" />
+<rect x="10" y="0" width="10" height="10" fill="rgb(214, 39, 40)" />
+<rect x="0" y="10" width="10" height="10" fill="rgb(148, 103, 189)" />
+<rect x="10" y="10" width="10" height="10" fill="rgb(242, 242, 242)" />
+<rect x="0" y="20" width="10" height="10" fill="rgb(132, 162, 194)" />
+<rect x="10" y="20" width="10" height="10" fill="rgb(231, 98, 0)" />
+<rect x="0" y="30" width="10" height="10" fill="rgb(210, 210, 210)" />
+<rect x="10" y="30" width="10" height="10" fill="rgb(111, 155, 142)" />
+<rect x="0" y="40" width="10" height="10" fill="rgb(31, 119, 180)" />
+<rect x="10" y="40" width="10" height="10" fill="rgb(255, 127, 14)" />
+<rect x="0" y="50" width="10" height="10" fill="rgb(255, 255, 255)" />
+<rect x="10" y="50" width="10" height="10" fill="rgb(198, 233, 175)" />
+<rect x="0" y="60" width="10" height="10" fill="rgb(255, 211, 101)" />
+<rect x="10" y="60" width="10" height="10" fill="rgb(162, 27, 50)" />
+<rect x="0" y="70" width="10" height="10" fill="rgb(224, 68, 94)" />
+<rect x="10" y="70" width="10" height="10" fill="rgb(0, 0, 0)" />
+<rect x="0" y="80" width="10" height="10" fill="rgb(140, 86, 75)" />
+<rect x="10" y="80" width="10" height="10" fill="rgb(44, 160, 44)" />
+<rect x="0" y="90" width="10" height="10" fill="rgb(255, 179, 128)" />
+<rect x="10" y="90" width="10" height="10" fill="rgb(206, 218, 231)" />
+</svg>

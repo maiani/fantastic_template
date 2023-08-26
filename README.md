@@ -12,18 +12,22 @@ The Fantastic PhD Thesis Template is a LaTeX template designed for creating mode
 - Easy-to-follow structure for a typical PhD thesis.
 - Instructions are included as comments in the .tex files.
 - Individual chapter compilation supported.
-
+- It is calibrated to work with the B5 paper size standard.
+- In the folder `color_palette_tools` a collection of scripts to extract and generate color palettes from SVG files is included. 
+    
 ## Usage Instructions
 Clone or download the template from the repository.  Customize the template by editing the .tex files to add your content. Some instructions are included as comments in the .tex files, follow them to get the best output.
+
+You should include your publication in the `publication.bib` file, while all other references should be included in the `bibliography.bib` file.
 
 ## Installation
 No installation is required for this template. Simply download and start using it!
 
-## Suggestion
+## Suggestions
 Be consistent with colors by defining a palette before starting to work on figures. Use the same colors for the colored text adjusting the setting in the main TeX file. 
 
 ## License
-This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC-BY-NC). For details, see [LICENSE](LICENSE) file.
+This project is licensed under the Creative Commons Attribution-Non Commercial 4.0 International License (CC-BY-NC). For details, see [LICENSE](LICENSE) file.
 
 ## Author
 
