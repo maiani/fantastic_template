@@ -18,7 +18,7 @@ The Fantastic PhD Thesis Template is a LaTeX template designed for creating mode
 ## Usage Instructions
 Clone or download the template from the repository.  Customize the template by editing the .tex files to add your content. Some instructions are included as comments in the .tex files, follow them to get the best output.
 
-You should include your publication in the `publication.bib` file, while all other references should be included in the `bibliography.bib` file.
+You should include all your publications in the `publications.bib` file, while all other references should be included in the `bibliography.bib` file.
 
 ## Installation
 No installation is required for this template. Simply download and start using it!
